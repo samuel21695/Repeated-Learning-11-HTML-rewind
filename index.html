@@ -28,6 +28,16 @@
         return `${name} is a ${type} type Pokemon.`;
       };
     }
+    // 변수 name과 type은 함수 바깥에서 제어할 수 없지만,
+    // 클로저를 반환하는 saveDataTag 함수를 실행하면서
+    // 접근은 가능합니다.
+
+    // 모든 div 요소를 선택합니다.
+    // querySelectorAll 메소드는 NodeList를 반환합니다.
+    const divArray = Array.from(document.querySelectorAll("div"));
+    // Array.from 메소드는 유사 배열 객체나 반복 가능한 객체를
+    // 얕게 복사(shallow copy)하여 새로운 배열을 만듭니다.
+    // 본 예제에서는 forEach 메소드를 사용하기 위해 배열로 변환하였습니다.
 
   </script>
 </body>
