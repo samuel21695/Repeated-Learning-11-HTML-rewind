@@ -13,5 +13,22 @@
   <div id="pokemon1" data-name="Pikachu" data-type="Electric">피카츄</div>
   <div id="pokemon2" data-name="Bulbasaar" data-type="grass">이상해씨</div>
   <div id="pokemon3" data-name="Charmander" data-type="Fire">파이리</div>
+
+  <script>
+    function saveDataTag(element) {
+      // element 매개변수의 값을 그대로 사용할 수 있지만,
+      // 리액트의 함수형 컴포넌트는 클로저를 사용하여 값을 지정합니다.
+      // 변수 name과 type은 클로저 내부에서만 사용 할 수 있으며, 일종의 지역변수입니다.
+      // 객체지향 프로그래밍에서 은닉화(데이터를 보호하는 것)와 비슷한 개념입니다.
+      const name = element.dataset.name;
+      const type = element.dataset.type;
+      console.log(name);
+      // 클로저 내부의 데이터를 사용하여 문장을 반환하는 함수입ㄴ디ㅏ.
+      return function() {
+        return `${name} is a ${type} type Pokemon.`;
+      };
+    }
+
+  </script>
 </body>
 </html>
