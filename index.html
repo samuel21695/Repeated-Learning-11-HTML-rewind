@@ -39,6 +39,11 @@
     // 얕게 복사(shallow copy)하여 새로운 배열을 만듭니다.
     // 본 예제에서는 forEach 메소드를 사용하기 위해 배열로 변환하였습니다.
 
+    // 각 div 요소에 대해 반복하면서 saveDataTag 함수를 사용합니다.
+    divArray.forEach((div) => {
+      const getPokemonInfo = saveDataTag(div);
+      div.textContent = getPokemonInfo();
+    });
   </script>
 </body>
 </html>
